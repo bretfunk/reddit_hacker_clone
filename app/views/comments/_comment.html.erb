@@ -1,0 +1,5 @@
+  <%= comment.body %>
+  <%= comment.user.email %>
+  <% if comment.user == current_user %>
+    <%= link_to 'Destroy', link_comment_path(comment), method: :delete %>
+  <% end %>
